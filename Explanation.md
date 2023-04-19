@@ -23,4 +23,55 @@ list_2 = [{'id':1, name:'siva'}]
   - This has O(m+n) time complexity
   - create a dictionary with id as key and object as value, update dictionary as you get the objects
     going with the second idea
+# Sample Test Case
 
+```python
+list_1 = [
+    {"id": "1", "name": "Shrey", "age": 25},
+    {"id": "3", "age": 10, "name": "Hello"},
+    {"id": "2", "name": "World", "age": 24},
+]
+
+list_2 = [
+    {"id": "1", "marks": 100},
+    {
+        "id": "3",
+        "marks": 90,
+        "roll_no": 11,
+        "extra_info": {
+            "hello": "world",
+        },
+    },
+]
+list_3 = [
+    {
+    'id': '1',
+    'name': 'Shrey',
+    'age': 25,
+    'marks': 100
+    },
+    {
+    'id': '3',
+    'age': 10,
+    'name': 'Hello',
+    'marks': 90,
+    'roll_no': 11,
+    'extra_info': {
+        'hello': 'world'
+        }
+    },
+    {
+    'id': '2',
+    'name': 'World',
+    'age': 24
+    }
+]
+```
+
+# How to run
+
+```bash
+python -i main.py
+> > >  list_3
+[{'id': '1', 'name': 'Shrey', 'age': 25, 'marks': 100}, {'id': '3', 'age': 10, 'name': 'Hello', 'marks': 90, 'roll_no': 11, 'extra_info': {'hello': 'world'}}, {'id': '2', 'name': 'World', 'age': 24}]
+```
