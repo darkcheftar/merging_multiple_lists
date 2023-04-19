@@ -26,7 +26,11 @@ def merge_lists(list_1, list_2) -> list:
     - Both lists are unsorted
     - Both lists can have missing values (for ex list_2 has missing id=2)
     """
-    # return list_3
+    merger = {}
+    for data in list_1 + list_2:
+        merger[data['id']] = merger.get(data['id'], {}) | data
+    return list(merger.values())
+
 
 
 list_3 = merge_lists(list_1, list_2)
