@@ -13,4 +13,14 @@ list_2 = [{'id':1, name:'siva'}]
 3. List are unsorted in terms of id (which implies every id element has to have id)
 4. Order of Output List does not matter (if required can sort using inbuild sort function)
 
+# Idea
+
+- This can be achieved in two ways
+- Using 2 for loops
+  - This has O(n^m) time complexity
+  - two for loops for two list merge on same id
+- Using a dict
+  - This has O(m+n) time complexity
+  - create a dictionary with id as key and object as value, update dictionary as you get the objects
+    going with the second idea
 
