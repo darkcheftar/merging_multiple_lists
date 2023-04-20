@@ -1,3 +1,4 @@
+from itertools import chain
 list_1 = [
     {"id": "1", "name": "Shrey", "age": 25},
     {"id": "3", "age": 10, "name": "Hello"},
@@ -17,7 +18,7 @@ list_2 = [
 ]
 
 
-def merge_lists(list_1, list_2) -> list:
+def merge_lists(*lists) -> list:
     """
     Complete this function, by merging the information from list_1 and list_2
     to create a new list, which has all the information about each student from
@@ -27,7 +28,7 @@ def merge_lists(list_1, list_2) -> list:
     - Both lists can have missing values (for ex list_2 has missing id=2)
     """
     merger = {}
-    for data in list_1 + list_2:
+    for data in chain.from_iterable(lists):
         merger[data['id']] = merger.get(data['id'], {}) | data
     return list(merger.values())
 
